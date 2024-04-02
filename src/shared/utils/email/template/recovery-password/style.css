@@ -1,0 +1,159 @@
+#outlook a {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+table,
+td {
+  border-collapse: collapse;
+}
+
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+p {
+  display: block;
+  margin: 0;
+}
+
+@media only screen and (min-width: 599px) {
+  .xc568 {
+    width: 568px !important;
+    max-width: 568px;
+  }
+
+  .xc276 {
+    width: 276px !important;
+    max-width: 276px;
+  }
+
+  .xc16 {
+    width: 16px !important;
+    max-width: 16px;
+  }
+
+  .pc100 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 599px) {
+  .moz-text-html .xc568 {
+    width: 568px !important;
+    max-width: 568px;
+  }
+
+  .moz-text-html .xc276 {
+    width: 276px !important;
+    max-width: 276px;
+  }
+
+  .moz-text-html .xc16 {
+    width: 16px !important;
+    max-width: 16px;
+  }
+
+  .moz-text-html .pc100 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  table.fwm {
+    width: 100% !important;
+  }
+
+  td.fwm {
+    width: auto !important;
+  }
+}
+
+u+.emailify a,
+#MessageViewBody a,
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+u+.emailify .glist {
+  margin-left: 0 !important;
+}
+
+@media only screen and (max-width: 599px) {
+  .emailify {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  u+.emailify .glist {
+    margin-left: 25px !important;
+  }
+
+  td.x {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  br.sb {
+    display: none !important;
+  }
+
+  .hd-1 {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  div.r.pr-16>table>tbody>tr>td {
+    padding-right: 16px !important
+  }
+
+  div.r.pl-16>table>tbody>tr>td {
+    padding-left: 16px !important
+  }
+
+  div.g.mb-16>table>tbody>tr>td {
+    padding-bottom: 16px !important
+  }
+
+  td.b.fw-1>table {
+    width: 100% !important
+  }
+
+  td.fw-1>table>tbody>tr>td>a {
+    display: block !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  td.b.fw-1>table {
+    width: 100% !important
+  }
+
+  td.fw-1>table>tbody>tr>td {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

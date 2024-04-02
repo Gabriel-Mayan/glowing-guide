@@ -1,0 +1,47 @@
+{
+  "env": {
+    "node": true,
+    "jest": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": [
+      "prettier",
+      "@typescript-eslint"
+  ],
+  "rules": {
+    "semi":["error", "always"],
+    "quotes":["error", "double"],
+    "indent": ["warn", 4],
+    "func-names": "warn",
+    "import/order": "warn",
+    "import/export": "warn",
+    "no-redeclare":"warn",
+    "no-param-reassign": "warn",
+    "no-restricted-syntax": "warn",
+    "no-multiple-empty-lines": "warn",
+    "@typescript-eslint/no-useless-constructor": "warn",
+    "@typescript-eslint/consistent-type-definitions":"warn",
+
+    "no-new":"off",
+    "max-classes-per-file": "off",
+    "no-extra-semi":"off",
+    "max-len": ["error", { "code": 150 }],
+    "no-unused-vars":"off",
+    "import/extensions": "off",
+    "consistent-return": "off",
+    "object-curly-newline":"off",
+    "import/no-unresolved": "off",
+    "class-methods-use-this": "off",
+    "lines-between-class-members": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/strict-boolean-expressions":"off"
+  }
+}
