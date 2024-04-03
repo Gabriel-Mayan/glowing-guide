@@ -1,13 +1,58 @@
-Template para nodejs em construção
+# Informações Extras
 
-## Informações Extras
+## Dockers utilizados
 
-Executar MySql Docker: docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0
-
-Executar Postgres Docker: docker run -d -p 54321:5432 --name postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -d postgres
 Executar Postgis Docker: docker run -d -p 54321:5432 --name postgis -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -d postgis/postgis
-
-Executar Keycloak Docker: docker run -p 80801:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.4 start-dev
 
 Executar Redis Docker: docker pull bitnami/redis
 Executar Redis Docker: docker run --name redis -p6379:6379 -d bitnami/redis redis-server --protected-mode no --save 60 1 --loglevel warning
+
+## Estrutura de Pastas
+
+-- src ("contém todas as informações de aplicação")    
+    -- main ("contém arquivos e pastas referentes a configuração geral do sistema")
+        -- config ("arquivos de configuração de modulos da api")
+        -- docs ("arquivos de documentação da api")
+        -- middlewares ("middlewares da api")
+        -- routes ("arquivos de rotas da api")
+        -- types ("arquivos de tipos globais")
+    
+    -- modules ("contém os módulos do projeto")
+        -- "nome_do_modulo" ("pasta que agrupa as funções dos modulos")
+            -- "nome_do_modulo.controller" ("arquivo que agrupa as funções que serão executadas nas rotas")
+            -- "nome_do_modulo.entity" ("arquivo que define a entidade do modulo definindo suas propriedades")
+            -- "nome_do_modulo.helper" ("arquivo que concentra todas as funções de auxilio dos controladores. Ex: Funções para organizar dados")
+            -- "nome_do_modulo.interface" ("contém os arquivos de interface do modulo")
+            -- "nome_do_modulo.repository" ("contém as querys do banco de dados")
+            -- "nome_do_modulo.validation" ("contém os arquivos de validação do modulo")
+    
+    -- shared ("contém arquivos compartilhados entre todos os modulos")
+        -- "protocols" ("pasta que contém a configuração do protocolo utilizado pelo projeto (nosso caso http)")
+        -- "services" ("contém arquivos com configurações de modulos externos utilizados no projeto")
+        -- "utils" ("contém funções que serão utilizadas entre os modulos. Ex: Funções que mexem com data e hora")
+    
+    -- app ("arquivo que monta as configurações do servidor")
+    -- server ("arquivo que da start no servidor")
+
+## Rodando o projeto
+    -- Criar um banco de dados postegres com as informações abaixo
+        -- port - 54321
+        -- name - postgres 
+        -- password - postgres
+    -- Executar o comando npm install para instalar todos os modulos
+    -- Duplicar o arquivo .env.exemple que está na raiz do projeto e renomear um deles para .env
+    -- Preencher as informações do .env
+        -- HOST - http://localhost
+        -- PORT - 8080
+
+        -- DB_CLIENT
+        -- DB_HOST
+        -- DB_PORT
+        -- DB_USERNAME
+        -- DB_PASSWORD
+        -- DB_DATABASE
+
+        -- JWT_SECRET - Você_Escolhe
+
+    -- Comando para startar o projeto - npm run dev
+    
