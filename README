@@ -1,14 +1,8 @@
-# Informações Extras
+Projeto de estudo
 
-## Dockers utilizados
-
-Executar Postgis Docker: docker run -d -p 54321:5432 --name postgis -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -d postgis/postgis
-
-Executar Redis Docker: docker pull bitnami/redis
-Executar Redis Docker: docker run --name redis -p6379:6379 -d bitnami/redis redis-server --protected-mode no --save 60 1 --loglevel warning
+# Informações Gerais
 
 ## Estrutura de Pastas
-
 -- src ("contém todas as informações de aplicação")    
     -- main ("contém arquivos e pastas referentes a configuração geral do sistema")
         -- config ("arquivos de configuração de modulos da api")
@@ -19,9 +13,9 @@ Executar Redis Docker: docker run --name redis -p6379:6379 -d bitnami/redis redi
     
     -- modules ("contém os módulos do projeto")
         -- "nome_do_modulo" ("pasta que agrupa as funções dos modulos")
-            -- "nome_do_modulo.controller" ("arquivo que agrupa as funções que serão executadas nas rotas")
-            -- "nome_do_modulo.entity" ("arquivo que define a entidade do modulo definindo suas propriedades")
-            -- "nome_do_modulo.helper" ("arquivo que concentra todas as funções de auxilio dos controladores. Ex: Funções para organizar dados")
+            -- "nome_do_modulo.controller" ("arquivo que agrupa as funções que serão executadas através das rotas")
+            -- "nome_do_modulo.entity" ("arquivo que define a entidade do modulo definindo suas propriedadese comportamentos básicos")
+            -- "nome_do_modulo.helper" ("arquivo que concentra todas as funções de auxilio dos controladores. Ex: Funções para formatar dados")
             -- "nome_do_modulo.interface" ("contém os arquivos de interface do modulo")
             -- "nome_do_modulo.repository" ("contém as querys do banco de dados")
             -- "nome_do_modulo.validation" ("contém os arquivos de validação do modulo")
@@ -34,7 +28,8 @@ Executar Redis Docker: docker run --name redis -p6379:6379 -d bitnami/redis redi
     -- app ("arquivo que monta as configurações do servidor")
     -- server ("arquivo que da start no servidor")
 
-## Rodando o projeto
+## Iniciando o projeto
+    -- Rodar comando no terminal: docker run -d -p 54321:5432 --name postgis -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -d postgis/postgis
     -- Criar um banco de dados postegres com as informações abaixo
         -- port - 54321
         -- name - postgres 
@@ -54,5 +49,5 @@ Executar Redis Docker: docker run --name redis -p6379:6379 -d bitnami/redis redi
 
         -- JWT_SECRET - Você_Escolhe
 
-    -- Comando para startar o projeto - npm run dev
-    
+## Rodando o projeto
+    -- Rodar comando no terminal - npm run dev
